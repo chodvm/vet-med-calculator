@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/components/ui/lib";
 
 export const Select = SelectPrimitive.Root;
@@ -17,7 +18,12 @@ export function SelectTrigger(
         className
       )}
       {...props}
-    />
+    >
+      <SelectValue />
+      <SelectPrimitive.Icon asChild>
+        <ChevronDown className="ml-2 h-4 w-4 opacity-60" />
+      </SelectPrimitive.Icon>
+    </SelectPrimitive.Trigger>
   );
 }
 
@@ -32,9 +38,17 @@ export function SelectContent(
         position={position}
         {...props}
       >
+        <SelectPrimitive.ScrollUpButton className="flex cursor-default items-center justify-center py-1">
+          <ChevronUp className="h-4 w-4 opacity-60" />
+        </SelectPrimitive.ScrollUpButton>
+
         <SelectPrimitive.Viewport className="p-1">
           {children}
         </SelectPrimitive.Viewport>
+
+        <SelectPrimitive.ScrollDownButton className="flex cursor-default items-center justify-center py-1">
+          <ChevronDown className="h-4 w-4 opacity-60" />
+        </SelectPrimitive.ScrollDownButton>
       </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
   );
