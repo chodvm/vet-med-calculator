@@ -76,7 +76,7 @@ const COMMON_DRUGS: Drug[] = [
       {label:"16 mg tab", kind:"solid", value:16}, {label:"24 mg tab", kind:"solid", value:24}, {label:"10 mg/mL", kind:"liquid", value:10}
     ], route:"SC/IV/PO" },
   { id:"butor", name:"Butorphanol", category:"Opioid", species:["dog","cat","rabbit","gpig","rat"], unitLabel:"mg/kg",
-    doseMin:0.2, doseMax:0.5, doseRanges:{ dog:{min:0.2,max:0.4}, cat:{min:0.1,max:0.4} },
+    doseRanges:{ dog:{min:0.2,max:0.4}, cat:{min:0.1,max:0.4} },
     presentations:[ {label:"2 mg/mL",kind:"liquid",value:2},{label:"5 mg/mL",kind:"liquid",value:5},{label:"10 mg/mL",kind:"liquid",value:10} ],
     route:"IM/IV/SC" },
   { id:"amoxi", name:"Amoxicillin/Clavulanate", category:"Antibiotic", species:["dog","cat"], unitLabel:"mg/kg",
