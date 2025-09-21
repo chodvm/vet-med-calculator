@@ -1,3 +1,7 @@
+"use client";
+// Vet Med Drug Calculator (v3.4.5) — app/src
+import React, { useEffect, useMemo, useState } from "react";
+
 // Vet Med Drug Calculator (v3.4.5) — app/src
 import React, { useEffect, useMemo, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
