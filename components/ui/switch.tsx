@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import * as SwitchPr from "@radix-ui/react-switch";
 import { cn } from "@/components/ui/lib";
